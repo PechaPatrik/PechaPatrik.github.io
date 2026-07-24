@@ -943,10 +943,11 @@ a.project-card:hover {
 
 @media (max-width: 720px) {
   .main-nav {
-    position: absolute;
+    position: fixed;
     top: 48px;
     left: 0;
     right: 0;
+    z-index: 50;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
