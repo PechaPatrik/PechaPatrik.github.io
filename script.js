@@ -1,7 +1,12 @@
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.querySelector(".main-nav");
+const siteHeader = document.querySelector(".site-header");
 
 navToggle.addEventListener("click", () => {
+  if (!mainNav.classList.contains("open")) {
+    const headerBottom = siteHeader.getBoundingClientRect().bottom;
+    mainNav.style.top = headerBottom + "px";
+  }
   mainNav.classList.toggle("open");
 });
 
