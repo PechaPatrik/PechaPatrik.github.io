@@ -2,11 +2,17 @@ const navToggle = document.getElementById("navToggle");
 const mainNav = document.querySelector(".main-nav");
 const siteHeader = document.querySelector(".site-header");
 
+function updateMobileNavPosition() {
+  const headerBottom = siteHeader.getBoundingClientRect().bottom;
+  mainNav.style.top = headerBottom + "px";
+}
+
+updateMobileNavPosition();
+window.addEventListener("scroll", updateMobileNavPosition);
+window.addEventListener("resize", updateMobileNavPosition);
+
 navToggle.addEventListener("click", () => {
-  if (!mainNav.classList.contains("open")) {
-    const headerBottom = siteHeader.getBoundingClientRect().bottom;
-    mainNav.style.top = headerBottom + "px";
-  }
+  updateMobileNavPosition();
   mainNav.classList.toggle("open");
 });
 
