@@ -947,6 +947,7 @@ a.project-card:hover {
     top: 48px;
     left: 0;
     right: 0;
+    height: auto;
     z-index: 50;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
