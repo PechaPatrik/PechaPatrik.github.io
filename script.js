@@ -24,7 +24,7 @@ mainNav.querySelectorAll("a").forEach((link) => {
 
 const filterContainer = document.getElementById("projectFilters");
 const filterAllRow = document.getElementById("filterAllRow");
-const projectCards = document.querySelectorAll(".project-card");
+const projectCards = document.querySelectorAll("#otherGrid .project-card");
 
 function tagToTypeName(tag) {
   const specialCases = {

@@ -23,6 +23,11 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
+<div class="unity-menubar" aria-hidden="true">
+  <div class="menubar-items"><span>File</span><span>Edit</span><span>Assets</span><span>GameObject</span><span>Component</span><span>Window</span><span>Help</span></div>
+  <span class="menubar-title">Portfolio.unity - Patrik Pecha</span>
+</div>
+
 <div class="unity-toolbar">
   <div class="toolbar-group">
     <svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg>
@@ -45,6 +50,7 @@
     <a href="#top" class="logo">PATRIK PECHA</a>
     <nav class="main-nav">
       <a href="#about">About</a>
+      <a href="#featured">Featured</a>
       <a href="#skills">Skills</a>
       <a href="#career">Career</a>
       <a href="#projects">Projects</a>
@@ -59,17 +65,29 @@
 <main id="top">
 
   <section class="hero">
+    <svg class="scene-gizmo" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" fill="rgba(26,26,26,0.5)" stroke="#505050"></circle>
+      <line x1="50" y1="50" x2="84" y2="50" stroke="#e5534b" stroke-width="3"></line>
+      <line x1="50" y1="50" x2="50" y2="16" stroke="#7fd66a" stroke-width="3"></line>
+      <line x1="50" y1="50" x2="30" y2="70" stroke="#4a90e2" stroke-width="3"></line>
+      <circle cx="84" cy="50" r="8" fill="#e5534b"></circle>
+      <circle cx="50" cy="16" r="8" fill="#7fd66a"></circle>
+      <circle cx="30" cy="70" r="8" fill="#4a90e2"></circle>
+      <text x="84" y="54" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">X</text>
+      <text x="50" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">Y</text>
+      <text x="30" y="74" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">Z</text>
+    </svg>
     <div class="container hero-inner">
       <p class="hero-role boot-pending">Game Programmer / Game Designer</p>
       <h1 class="hero-name boot-pending">Patrik Pecha</h1>
       <p class="hero-line">I build game AI, custom engines, and the tools behind them, currently looking for a programming internship.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#featured" class="btn btn-primary">View projects</a>
         <a href="assets/Patrik_Pecha_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download>Download CV</a>
       </div>
       <ul class="hero-contact-icons">
         <li>
-          <a class="hero-contact-icon" href="mailto:patrikpog27@gmail.com" aria-label="Email" title="Email">
+          <a class="hero-contact-icon" href="mailto:patrik.pecha@student.howest.be" aria-label="Email" title="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="2"></rect>
               <path d="M3 7l9 6 9-6"></path>
@@ -118,13 +136,21 @@
         <p class="section-label">About</p>
         <h2>Who I am</h2>
 
+        <div class="inspector-object">
+          <span class="inspector-check"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"></path><path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"></path></svg>
+          <span class="inspector-object-name">Patrik Pecha</span>
+          <span class="inspector-static">Static</span>
+        </div>
+
         <div class="inspector-component">
           <div class="inspector-component-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <path d="M14 2v6h6"></path>
             </svg>
-            <span>PatrikPecha.cs</span>
+            <span class="inspector-check on"></span>
+            <span>PatrikPecha (Script)</span>
           </div>
           <div class="inspector-fields">
             <div class="inspector-row">
@@ -137,7 +163,7 @@
             </div>
             <div class="inspector-row">
               <span class="inspector-label">Focus</span>
-              <span class="inspector-value">Game AI, Engines, Tools</span>
+              <span class="inspector-value">Game AI, Unity, Engines</span>
             </div>
             <div class="inspector-row">
               <span class="inspector-label">Status</span>
@@ -146,19 +172,127 @@
           </div>
         </div>
 
-        <p>I'm a game programming and design student at Digital Arts and Entertainment (Howest). Most of my project work sits in game AI, engine programming, and graphics: a custom C++ engine, a Vulkan renderer, and AI systems built around Behavior Trees, steering behaviors, and flow field pathfinding.</p>
-        <p>Beyond programming, I've led balance and design coherence across two group projects. When I recreate a game, like my Q*bert build, I playtest it thoroughly. A background in speedrunning means I know how far players will push a system, and knowing the code underneath means I know exactly where it's likely to break.</p>
+        <p>I'm a <span class="hl">game programming and design student</span> at Digital Arts and Entertainment (Howest). Most of my work sits in <span class="hl">game AI</span>, <span class="hl">Unity gameplay</span>, and <span class="hl">engine programming</span>: a custom C++ engine, a Vulkan renderer, and AI built on Behavior Trees, steering behaviors, and flow field pathfinding.</p>
+        <p>Beyond code, I've led <span class="hl">balance and design coherence</span> across two group projects. When I recreate a game, like my Q*bert build, I <span class="hl">playtest thoroughly</span>. A <span class="hl">background in speedrunning</span> means I know how far players will push a system, and knowing the code underneath means I know exactly where it's likely to break.</p>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="section section-alt">
+  <section id="featured" class="section section-alt">
     <div class="panel-header">
       <div class="panel-tab">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path>
+        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"></path>
+        <path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"></path>
       </svg>
-        <span>Project</span>
+        <span>Scene</span>
+      </div>
+      <svg class="panel-options" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle></svg>
+    </div>
+    <div class="container">
+      <p class="breadcrumb">Assets / Scenes / Main</p>
+      <p class="section-label">Featured</p>
+      <h2>Featured work</h2>
+        <!-- copy a card to add a project. the whole card is one link, set its href to the repo or playable build -->
+      <div class="project-grid" id="featuredGrid">
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/prog4_pecha_patrik" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/qbert.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Custom Game Engine: Q*bert</h3>
+            <p class="project-hook">Built the engine first, then used it to recreate the first three levels of Q*bert.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>C++</li>
+              <li>Engine Programming</li>
+            </ul>
+            <p class="project-desc">Wrote a small game engine from scratch as the deliverable for a programming course, then used it to build the first three levels of Q*bert, including the isometric pyramid, enemy behavior, and level progression. Rendering, input, and game logic all run on the custom engine, not a pre-built one.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://r-creator.itch.io/labyrintigo" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/lab.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Labyrintigo</h3>
+            <p class="project-hook">A 2 to 4 player scramble to steal gold from each other inside a shifting labyrinth.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Gameplay Programming</li>
+              <li>Team Project</li>
+            </ul>
+            <p class="project-desc">A competitive couch multiplayer game built with a team of 6 students. Players collect gold scattered through a constantly shifting labyrinth and race it back to their base, but nothing is safe until it's home, opponents can steal it right back. Credited for the labyrinth movement and power-up implementation.</p>
+            <span class="project-link-hint link-arrow">Play on itch.io</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://butterdawgg.itch.io/allie-meet-alles" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/client.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Allie Meet Alles</h3>
+            <p class="project-hook">A learning game built for a real client, teaching kids estimation and measuring.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Programming</li>
+              <li>Client Work</li>
+              <li>Team Project</li>
+            </ul>
+            <p class="project-desc">Built for an external client, a farm-themed educational game teaching kids estimation and measurement through a set of mini-games: weighing goods, balancing objects on a tilting shelf, portioning drinks, and hunting for lost items. Built in Unity and shipped to WebGL so it runs directly in the browser. Working to a client brief meant balancing the educational goals with what actually stays fun for a young audience.</p>
+            <span class="project-link-hint link-arrow">Play on itch.io</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_Vulkan_Renderer" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/vulkan.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Vulkan glTF Renderer</h3>
+            <p class="project-hook">A Vulkan renderer built from scratch, loading and rendering scenes through glTF.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Vulkan</li>
+              <li>C++</li>
+              <li>Graphics Programming</li>
+            </ul>
+            <p class="project-desc">A real-time Vulkan renderer with glTF scene loading through tinygltf and a free-fly camera, built with no game engine underneath it, handling lighting, texturing, and performance against detailed scenes.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_AlienInspector" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/alien.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Alien Inspector</h3>
+            <p class="project-hook">You're the inspector at a teleport station, and every call you make has consequences.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Programming</li>
+              <li>Game Design</li>
+            </ul>
+            <p class="project-desc">You play an inspector at a teleport station, checking documentation and deciding who is authorized to pass through. Built around rule-checking and consequence systems, so getting a call wrong, in either direction, has to feel meaningful.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="panel-header">
+      <div class="panel-tab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"></path><path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"></path></svg>
+        <span>Package Manager</span>
       </div>
       <svg class="panel-options" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle></svg>
     </div>
@@ -239,7 +373,7 @@
     </div>
   </section>
 
-  <section id="career" class="section">
+  <section id="career" class="section section-alt">
     <div class="panel-header">
       <div class="panel-tab">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -253,13 +387,14 @@
       <p class="section-label">Career</p>
       <h2>How I got here</h2>
 
+      <div class="hierarchy-root"><span class="tree-arrow"></span><span>Career</span><span class="hierarchy-scene">(scene)</span></div>
       <ol class="timeline">
 
         <li class="timeline-item reveal">
           <span class="timeline-year">High school</span>
           <div class="timeline-content">
             <h3>Building things before it was a plan</h3>
-            <p>A small RPG Maker 2003 demo and a handful of self-directed tkinter experiments in Python, both referenced in Projects below.</p>
+            <p>A small RPG Maker 2003 demo and a handful of tkinter experiments in Python, all made for fun and not for a class. The Python ones are listed under Projects.</p>
           </div>
         </li>
 
@@ -267,7 +402,7 @@
           <span class="timeline-year">Early university</span>
           <div class="timeline-content">
             <h3>First projects with real structure</h3>
-            <p>Sneklipse and a roguelike shooter were the first projects built with actual design intent behind them, both in Projects below.</p>
+            <p>Sneklipse and a roguelike shooter were the first projects built with actual design intent behind them, both listed under Projects.</p>
           </div>
         </li>
 
@@ -275,15 +410,15 @@
           <span class="timeline-year">Building fundamentals</span>
           <div class="timeline-content">
             <h3>First real C++ game</h3>
-            <p>A recreation of the Sans fight from Undertale, built on a school-made engine, referenced in Projects below.</p>
+            <p>A recreation of the Sans fight from Undertale, built on a school-made engine and listed under Projects.</p>
           </div>
         </li>
 
         <li class="timeline-item reveal">
           <span class="timeline-year">Present</span>
           <div class="timeline-content">
-            <h3>From here, it gets more structured</h3>
-            <p>Game design, game AI, graphics programming, engine work, and team projects, all detailed below in Projects.</p>
+            <h3>Game AI, engines, and shipped Unity games</h3>
+            <p>A custom C++ engine, Unity team and client projects, behavior trees, steering, flow fields, and a Vulkan renderer. The best of it is under Featured above.</p>
           </div>
         </li>
 
@@ -291,20 +426,18 @@
     </div>
   </section>
 
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="panel-header">
       <div class="panel-tab">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"></path>
-        <path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"></path>
-      </svg>
-        <span>Scene</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg>
+        <span>Project</span>
       </div>
       <svg class="panel-options" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle></svg>
     </div>
     <div class="container">
+      <p class="breadcrumb">Assets / Projects / All</p>
       <p class="section-label">Projects</p>
-      <h2>Selected work</h2>
+      <h2>More projects</h2>
 
       <div class="filter-command">
         <span class="cmd-prefix">&gt;</span> <span id="filterCommandText">FindObjectsByType&lt;GameObject&gt;()</span>
@@ -312,63 +445,8 @@
       <div class="filter-all-row" id="filterAllRow"></div>
       <div class="project-filters" id="projectFilters"></div>
 
-      <div class="project-tier" id="featuredTier">
-        <span class="featured-label">Featured</span>
-        <!-- copy a card from either grid below to add a new project. the whole card is one link, set its href to the repo or playable build. data-images holds extra photos to cycle through, the img src is the first frame. for an in-progress project with no link yet, use a div instead of an a, and swap project-link-hint's text/class -->
-        <div class="project-grid" id="featuredGrid">
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/prog4_pecha_patrik" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/qbert.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Custom Game Engine: Q*bert</h3>
-            <p class="project-hook">Built the engine first, then used it to recreate the first three levels of Q*bert.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>C++</li>
-              <li>Engine Programming</li>
-            </ul>
-            <p class="project-desc">Wrote a small game engine from scratch as the deliverable for a programming course, then used it to build the first three levels of Q*bert, including the isometric pyramid, enemy behavior, and level progression. Rendering, input, and game logic all run on the custom engine, not a pre-built one.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://r-creator.itch.io/labyrintigo" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/lab.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Labyrintigo</h3>
-            <p class="project-hook">A 2 to 4 player scramble to steal gold from each other inside a shifting labyrinth.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unity</li>
-              <li>C#</li>
-              <li>Gameplay Programming</li>
-              <li>Team Project</li>
-            </ul>
-            <p class="project-desc">A competitive couch multiplayer game built with a team of 6 students. Players collect gold scattered through a constantly shifting labyrinth and race it back to their base, but nothing is safe until it's home, opponents can steal it right back. Credited for the labyrinth movement and power-up implementation.</p>
-            <span class="project-link-hint link-arrow">Play on itch.io</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://butterdawgg.itch.io/allie-meet-alles" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/client.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Allie Meet Alles</h3>
-            <p class="project-hook">A learning game built for a real client, teaching kids estimation and measuring.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unity</li>
-              <li>C#</li>
-              <li>Programming</li>
-              <li>Client Work</li>
-              <li>Team Project</li>
-            </ul>
-            <p class="project-desc">Built for an external client, a farm-themed educational game teaching kids estimation and measurement through a set of mini-games: weighing goods, balancing objects on a tilting shelf, portioning drinks, and hunting for lost items. Built in Unity and shipped to WebGL so it runs directly in the browser. Working to a client brief meant balancing the educational goals with what actually stays fun for a young audience.</p>
-            <span class="project-link-hint link-arrow">Play on itch.io</span>
-          </div>
-        </a>
+      <div class="project-tier" id="otherTier">
+        <div class="project-grid" id="otherGrid">
 
         <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_DualRasterizer" target="_blank" rel="noopener noreferrer">
           <div class="viewport-frame project-media">
@@ -382,65 +460,6 @@
               <li>Graphics Programming</li>
             </ul>
             <p class="project-desc">Implements a full rasterization pipeline twice over: a hardware path through DirectX, and a from-scratch software rasterizer running the same vertex transforms, shading, texturing, and depth testing entirely on the CPU. Built to understand exactly what a GPU is doing by also doing it without one.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/SansFight" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/sans.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Undertale: Sans Boss Fight</h3>
-            <p class="project-hook">A from-scratch build of one of gaming's most infamous bullet-hell boss fights.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>C++</li>
-              <li>Programming</li>
-            </ul>
-            <p class="project-desc">Recreated the Sans boss fight from Undertale using a school-provided C++ engine, my first real game project working with real-time input, timing, and state. The fight's bullet patterns and precise timing windows had to be rebuilt to match the original's difficulty and feel.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        
-        </div>
-      </div>
-
-      <div class="project-tier" id="otherTier">
-        <span class="featured-label other-label">Other Projects</span>
-        <div class="project-grid" id="otherGrid">
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_ZombieAI" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/zombie.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Zombie Survival AI</h3>
-            <p class="project-hook">Survivors that scavenge, fight, or flee based on what they actually know about the world.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unreal Engine 5</li>
-              <li>C++</li>
-              <li>AI Programming</li>
-              <li>Game Design</li>
-            </ul>
-            <p class="project-desc">Built a Behavior Tree driven AI for zombie survivors, including custom C++ BT tasks and services for wandering, looting, combat, and fleeing, backed by a knowledge component that tracks what each agent has learned. Delivered as a GameFeature plugin that injects cleanly into the base project.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_GameAI_Research" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/research.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Flow Field Pathfinding</h3>
-            <p class="project-hook">One pathfinding pass that serves every agent on the map at once, not one at a time.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unity</li>
-              <li>C#</li>
-              <li>AI Programming</li>
-            </ul>
-            <p class="project-desc">A research project made in Unity implementing flow field pathfinding: a cost field built from Physics2D overlap checks, an integration field solved with a custom binary min-heap Dijkstra implementation, and a direction field baked from it for agents to follow. Includes four live visualization modes and a build-compatible rendering path using GL lines instead of editor-only Gizmos.</p>
             <span class="project-link-hint link-arrow">View repository</span>
           </div>
         </a>
@@ -461,6 +480,92 @@
           </div>
         </a>
 
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/SNEKlipse" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/sneklipse.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Sneklipse</h3>
+            <p class="project-hook">A gravity-twisted take on snake, solved one careful length at a time.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>C++</li>
+              <li>Programming</li>
+              <li>Game Design</li>
+            </ul>
+            <p class="project-desc">A pixel art puzzle game built on snake mechanics with one added twist: gravity constantly pulls on your body. Eating food extends your length, which becomes the tool needed to bridge gaps and reach the exit in each hand-designed level.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/SansFight" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/sans.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Undertale: Sans Boss Fight</h3>
+            <p class="project-hook">A from-scratch build of one of gaming's most infamous bullet-hell boss fights.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>C++</li>
+              <li>Programming</li>
+            </ul>
+            <p class="project-desc">Recreated the Sans boss fight from Undertale using a school-provided C++ engine, my first real game project working with real-time input, timing, and state. The fight's bullet patterns and precise timing windows had to be rebuilt to match the original's difficulty and feel.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_Guns-n-goons" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/guns.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Guns'n'Goons</h3>
+            <p class="project-hook">A turn-based shop roguelike: buy and upgrade weapons between waves, then make every shot count.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unreal Engine 5</li>
+              <li>C++</li>
+              <li>Programming</li>
+              <li>Game Design</li>
+            </ul>
+            <p class="project-desc">A turn-based combat roguelike built around a weapon shop between waves. Each weapon has its own stats, damage, accuracy, reload time, and levels up through use, while upgrade and passive cards reshape a run's strategy. Every turn is a choice: fire a weapon, or spend the turn on an action card instead. Built in Unreal Engine with at least one core system implemented directly in C++ rather than Blueprints.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_ZombieAI" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/zombie.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Zombie Survival AI</h3>
+            <p class="project-hook">Survivors that scavenge, fight, or flee based on what they actually know about the world.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unreal Engine 5</li>
+              <li>C++</li>
+              <li>AI Programming</li>
+              <li>Game Design</li>
+            </ul>
+            <p class="project-desc">Built a Behavior Tree driven AI for zombie survivors, including custom C++ BT tasks and services for wandering, looting, combat, and fleeing, backed by a knowledge component that tracks what each agent has learned. Delivered as a GameFeature plugin that injects cleanly into the base project. The repo includes a full write-up of the design reasoning behind how each behavior was shaped, not just the code.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_GameAI_Research" target="_blank" rel="noopener noreferrer">
+          <div class="viewport-frame project-media">
+            <video src="assets/research.webm" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Flow Field Pathfinding</h3>
+            <p class="project-hook">One pathfinding pass that serves every agent on the map at once, not one at a time.</p>
+            <ul class="tag-list tag-list-mono">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>AI Programming</li>
+            </ul>
+            <p class="project-desc">An Algorithms 2 research assignment implementing flow field pathfinding: a cost field built from Physics2D overlap checks, an integration field solved with a custom binary min-heap Dijkstra implementation, and a direction field baked from it for agents to follow. Includes four live visualization modes and a build-compatible rendering path using GL lines instead of editor-only Gizmos.</p>
+            <span class="project-link-hint link-arrow">View repository</span>
+          </div>
+        </a>
+
         <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_GameAI" target="_blank" rel="noopener noreferrer">
           <div class="viewport-frame project-media">
             <video src="assets/GameAI.webm" autoplay muted loop playsinline></video>
@@ -473,7 +578,7 @@
               <li>C++</li>
               <li>AI Programming</li>
             </ul>
-            <p class="project-desc">A game AI project implementing classic steering behaviors in C++ for agent movement, seek, flee, arrive, wander, and pursuit-style behaviors that combine into more natural-looking motion than direct pathing alone.</p>
+            <p class="project-desc">An Algorithms 2 assignment implementing classic steering behaviors in C++ for agent movement, seek, flee, arrive, wander, and pursuit-style behaviors that combine into more natural-looking motion than direct pathing alone.</p>
             <span class="project-link-hint link-arrow">View repository</span>
           </div>
         </a>
@@ -495,23 +600,6 @@
           </div>
         </a>
 
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/SNEKlipse" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/sneklipse.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Sneklipse</h3>
-            <p class="project-hook">A gravity-twisted take on snake.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>C++</li>
-              <li>Programming</li>
-              <li>Game Design</li>
-            </ul>
-            <p class="project-desc">A pixel art puzzle game built on snake mechanics with one added twist: gravity constantly pulls on your body. Eating food extends your length, which becomes the tool needed to bridge gaps and reach the exit in each level.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
         <a class="project-card reveal" href="https://github.com/PechaPatrik/Pecha_Patrik_Python" target="_blank" rel="noopener noreferrer">
           <div class="viewport-frame project-media">
             <video src="assets/python.webm" autoplay muted loop playsinline></video>
@@ -528,67 +616,13 @@
           </div>
         </a>
 
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_Vulkan_Renderer" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/vulkan.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Vulkan glTF Renderer</h3>
-            <p class="project-hook">A Vulkan renderer built from scratch, loading and rendering scenes through glTF.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Vulkan</li>
-              <li>C++</li>
-              <li>Graphics Programming</li>
-            </ul>
-            <p class="project-desc">A real-time Vulkan renderer with glTF scene loading through tinygltf and a free-fly camera, built with no game engine underneath it, handling lighting, texturing, and performance against detailed scenes.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_AlienInspector" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/alien.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Alien Inspector</h3>
-            <p class="project-hook">You're the inspector at a teleport station, and every call you make has consequences.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unity</li>
-              <li>C#</li>
-              <li>Programming</li>
-              <li>Game Design</li>
-            </ul>
-            <p class="project-desc">You play an inspector at a teleport station, checking documentation and deciding who is authorized to pass through. Built around rule-checking and consequence systems, so getting a call wrong, in either direction, has to feel meaningful.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        <a class="project-card reveal" href="https://github.com/PechaPatrik/PechaPatrik_Guns-n-goons" target="_blank" rel="noopener noreferrer">
-          <div class="viewport-frame project-media">
-            <video src="assets/guns.webm" autoplay muted loop playsinline></video>
-          </div>
-          <div class="project-body">
-            <h3>Guns'n'Goons</h3>
-            <p class="project-hook">A turn-based shop roguelike: buy and upgrade weapons between waves, then make every shot count.</p>
-            <ul class="tag-list tag-list-mono">
-              <li>Unreal Engine 5</li>
-              <li>C++</li>
-              <li>Programming</li>
-              <li>Game Design</li>
-            </ul>
-            <p class="project-desc">A turn-based combat roguelike built around a weapon shop between waves. Each weapon has its own stats, damage, accuracy, reload time, and levels up by merging, while upgrade cards reshape a run's strategy. Built in Unreal Engine with most core systems implemented directly in C++ rather than Blueprints.</p>
-            <span class="project-link-hint link-arrow">View repository</span>
-          </div>
-        </a>
-
-        
         </div>
       </div>
 
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section section-alt">
     <div class="panel-header">
       <div class="panel-tab">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -608,15 +642,21 @@
         <a href="#top" class="back-to-top">Back to top</a>
       </div>
       <p class="hero-line">Currently open to internship opportunities, feel free to reach out through any of these.</p>
+      <div class="console-toolbar" aria-hidden="true">
+        <span class="console-btn">Clear</span>
+        <span class="console-btn">Collapse</span>
+        <span class="console-btn">Error Pause</span>
+        <span class="console-counts"><span class="count-info">4</span><span class="count-warn">0</span><span class="count-error">0</span></span>
+      </div>
       <ul class="console-log">
         <li>
-          <a class="log-row" href="mailto:patrikpog27@gmail.com">
+          <a class="log-row" href="mailto:patrik.pecha@student.howest.be">
             <svg class="log-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="2"></rect>
               <path d="M3 7l9 6 9-6"></path>
             </svg>
             <div class="log-content">
-              <span class="log-message">patrikpog27@gmail.com</span>
+              <span class="log-message">patrik.pecha@student.howest.be</span>
               <p class="log-context">ContactManager.cs:4</p>
             </div>
           </a>
@@ -660,7 +700,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>Patrik Pecha, built with GitHub Pages.</p>
+    <p><span class="status-dot"></span>Patrik Pecha, built with GitHub Pages.</p>
   </div>
 </footer>
 
